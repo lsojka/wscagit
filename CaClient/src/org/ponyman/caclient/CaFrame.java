@@ -6,17 +6,27 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class handling display of received cellular automata data.
+ * <p>
+ * @author Ponyman
+ * @version 0.8
+ * <p>
+ * 
+ */
 public class CaFrame extends Frame{
 
-	/**
-	 * 
-	 */
 
-	
 	private static final long serialVersionUID = 1L;
 	private int N;
 	List<Integer> grid = new ArrayList<>();
 	
+	/**
+	 * Contructor setting up the frame for displaying the cellular automata.
+	 * 
+	 * @param _N Size of the automata.
+	 * @param _grid Automata data change between steps.
+	 */
 	public CaFrame(int _N, List<Integer> _grid) {
 		// TODO Auto-generated constructor stub
 		N = _N;
@@ -35,6 +45,13 @@ public class CaFrame extends Frame{
 		 });
 	}
 	
+	/**
+	 * Customized method for displaying cellular automata on Awt Frame.
+	 * <p>
+	 * @param g Graphics awt object.
+	 * 
+	 * @see java.awt.Window#paint(java.awt.Graphics)
+	 */
 	public void paint(Graphics g)
 	{
 		//Color red = Color(136, 45, 23); 

@@ -8,12 +8,15 @@ import org.ponyman.ca.CaPublisher;
 import org.ponyman.ca.CaPublisherService;
 
 
-/*
- * @author lsojka
- * @version 0.8
- * 
+/**
  * Class connecting with CA WebService and handling received automata data.
+ * <p>
+ * @author Ponyman
+ * @version 0.8
+ * <p>
+ * 
  */
+
 
 public class CaClient{
 
@@ -28,13 +31,21 @@ public class CaClient{
 		// TODO Auto-generated constructor stub
 
 	}
-	/*
-	 * Main method of client.
+	/**
+	 * Main method of client
+	 * <p>
+	 * Uses classes generated from WSDL to connect to WebService server:
+	 * <p>
+	 * {@link org.ponyman.ca.CaPublisherService ServiceClass } - WDSL-generated "Service" object providing "Port" instance
+	 * <p>
+	 * {@link  org.ponyman.ca.CaPublisher PortClass} - WDSL-generated "Port" object which allows direct calling of {@link org.ponyman.ca.CaPublisher#getCaData(int N, int rule) getCaData} webmethod executed on the server.	
 	 * 
-	 * @param arg[0] Size of CA automata, received as first application argument.
-	 * @param arg[1] Rule for CA automata transformations, received as second application argument.  
+	 * @param args Size and rule of CA automata, passed as two application arguments.
+	 *   
+	 * 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		List<Integer> grid = new ArrayList<>();
 		
